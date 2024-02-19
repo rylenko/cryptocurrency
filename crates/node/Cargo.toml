@@ -1,0 +1,12 @@
+[package]
+name = "node"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0.69"
+blockchain = { path = "../blockchain" }
+common = { path = "../common" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tracing = "0.1.37"

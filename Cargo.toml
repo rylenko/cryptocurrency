@@ -1,0 +1,26 @@
+[package]
+name = "cryptocurrency"
+version = "0.1.0"
+keywords = ["cryptocurrency", "blockchain", "cryptography", "p2p", "decentralization"]
+description = "Realization of a simple cryptocurrency."
+license-file = "LICENSE"
+readme = "README.md"
+edition = "2018"
+
+[workspace]
+members = [
+	"crates/blockchain",
+	"crates/common",
+	"crates/node",
+	"crates/client",
+]
+
+[[bin]]
+name = "launcher"
+path = "crates/launcher/main.rs"
+
+[dependencies]
+anyhow = "1.0.69"
+client = { path = "crates/client" }
+common = { path = "crates/common" }
+node = { path = "crates/node" }
